@@ -1,0 +1,83 @@
+/* Стилі для шапки */
+.header {
+   text-align: center;
+}
+
+/* Стилі для навігації */
+nav ul {
+   padding: 0;
+}
+
+nav li {
+   list-style: none;
+   display: inline;
+   font-size: 24px;
+   margin-right: 8px;
+}
+
+/* Стилі для контейнера */
+.container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   /* Додаємо обтікання для мобільних */
+}
+
+/* Стилі для фото */
+.photo {
+   max-width: 600px;
+}
+
+.photo img {
+   width: 100%;
+}
+
+/* Стилі для тексту */
+.data {
+   font-size: 24px;
+}
+
+.data ul {
+   margin-top: 0;
+}
+
+/* Кнопка меню схована за замовчуванням */
+.menu-button {
+   display: none;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+}
+
+/* Адаптивність: для екранів менше 768px */
+@media (max-width: 768px) {
+
+   /* Показуємо кнопку меню */
+   .menu-button {
+      display: block;
+      margin: 10px auto;
+   }
+
+   /* Ховаємо пункти меню */
+   nav ul {
+      display: none;
+      flex-direction: column;
+      padding: 0;
+   }
+
+   nav li {
+      display: block;
+      margin: 10px 0;
+   }
+
+   /* Показуємо меню при кліку */
+   nav ul.active {
+      display: flex;
+   }
+}
+
+/* Клас для активації меню */
+.menu-button.active+nav ul {
+   display: flex;
+}
